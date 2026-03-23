@@ -1,6 +1,4 @@
-# archived 
 
-项目已归档，不再更新，原因见末尾说明。
 
 # EZWowX2
 
@@ -9,6 +7,17 @@
 一系列适用于《魔兽世界》12.0版本的非侵入性自动化辅助工具**示例**。  
 
 ---
+
+# 新坑
+
+还是不变的。插件-解析器-执行器
+
+- [EZAddonX2](https://github.com/liantian-cn/EZWowX2/tree/main/EZAddonX2)
+- [EZBridgeX2](https://github.com/liantian-cn/EZWowX2/tree/main/EZBridgeX2)
+- [EZDriverX2](https://github.com/liantian-cn/EZWowX2/tree/main/EZDriverX2)
+
+---
+
 
 ## ⚠️ 免责声明⚠️
 
