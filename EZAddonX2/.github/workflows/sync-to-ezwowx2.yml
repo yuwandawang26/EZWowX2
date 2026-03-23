@@ -1,0 +1,100 @@
+name: Sync to EZWowX2
+
+on:
+  push:
+    branches:
+      - draft
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-ezwowx2-main
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout private repo
+        uses: actions/checkout@v4
+        with:
+          ref: draft
+          path: EZAddonX2
+
+      - name: Checkout target repo
+        uses: actions/checkout@v4
+        with:
+          repository: liantian-cn/EZWowX2
+          ref: main
+          token: ${{ secrets.EZWOWX2_PAT }}
+          path: EZWowX2
+
+      - name: Sync files
+        run: |
+          rm -rf EZWowX2/EZAddonX2[NEW]
+          rm -rf EZWowX2/EZAddonX2
+          cp -R EZAddonX2 EZWowX2/EZAddonX2
+          rm -rf EZWowX2/EZAddonX2/.git
+
+      - name: Configure git
+        working-directory: EZWowX2
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Stage changes
+        working-directory: EZWowX2
+        run: |
+          git add -A
+
+      - name: Detect staged changes
+        id: staged_changes
+        working-directory: EZWowX2
+        run: |
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "No changes"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate diff summary
+        id: diff_summary
+        if: steps.staged_changes.outputs.has_changes == 'true'
+        working-directory: EZWowX2
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DS_URL: ${{ secrets.DS_URL }}
+        run: |
+          if ! SUMMARY=$(
+            git diff --cached . | base64 | tr -d '\n' | \
+            curl -sS -X POST "$DS_URL" \
+              -H "DEEPSEEK_API_KEY: $DEEPSEEK_API_KEY" \
+              --data-urlencode payload@-
+          ); then
+            echo "Diff summary generation failed, fallback to empty summary."
+            SUMMARY=""
+          fi
+          {
+            echo "summary<<EOF"
+            echo "$SUMMARY"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Commit changes
+        if: steps.staged_changes.outputs.has_changes == 'true'
+        working-directory: EZWowX2
+        env:
+          DIFF_SUMMARY: ${{ steps.diff_summary.outputs.summary }}
+        run: |
+          TS_BJ=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')
+          git commit \
+            -m "Sync @ $TS_BJ" \
+            -m "$(printf '%s' "$DIFF_SUMMARY")"
+
+      - name: Push changes
+        if: steps.staged_changes.outputs.has_changes == 'true'
+        working-directory: EZWowX2
+        run: |
+          git push origin main

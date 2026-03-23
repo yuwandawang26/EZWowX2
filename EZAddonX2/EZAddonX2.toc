@@ -1,0 +1,33 @@
+## Interface: 120000, 120001
+## Title: EZAddonX2
+## Author: Anonymous
+## Version: 12.0.1.66044
+## SavedVariables: EZAddonX2DB
+## LoadSavedVariablesFirst: 1
+## Category-zhCN: 工具
+
+# LibStub
+Libs\LibStub\LibStub.lua
+Libs\LibRangeCheck-3.0\LibRangeCheck-3.0.lua
+
+Setting.lua
+
+# Frame
+Frame\00Core.lua
+Frame\01Event.lua
+Frame\02MainFrame.lua
+Frame\03Setup.lua
+Frame\10AuraFrame.lua
+Frame\11PlayerStatusFrame.lua
+Frame\12SpellFrame.lua
+Frame\13PartyFrame.lua
+Frame\14UnitStatusFrame.lua
+Frame\15MiscFrame.lua
+Frame\16SignalFrame.lua
+
+Class\Priest.lua
+Class\Druid.lua
+
+Class\MacroReg.lua
+
+Class\InterruptList.lua

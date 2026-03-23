@@ -1,0 +1,12 @@
+{
+    "Lua.diagnostics.globals": [
+        "SlashCmdList",
+        "Settings",
+        "MinimalSliderWithSteppersMixin",
+        "DISABLE",
+        "COLOR",
+        "Add",
+        "SetCVar"
+    ],
+    "Lua.type.weakUnionCheck": true
+}
