@@ -7,8 +7,16 @@
 一系列适用于《魔兽世界》12.0版本的非侵入性自动化辅助工具**示例**。  
 
 ---
+## 开源新坑
 
-# 新坑
+这个是目前正在用，且维护中的
+
+- [Terminal](https://github.com/liantian-cn/Terminal)
+- [DejaVu](https://github.com/liantian-cn/DejaVu)
+
+---
+
+## 新增
 
 还是不变的。插件-解析器-执行器
 
