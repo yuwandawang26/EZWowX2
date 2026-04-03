@@ -1,0 +1,285 @@
+2026-04-03 20:42:02,985 - floating_window - DEBUG - set_running_state: is_running=False, is_paused=False
+2026-04-03 20:42:02,985 - hotkey_manager - DEBUG - Win32 DLL加载成功
+2026-04-03 20:42:02,985 - __main__ - INFO - 初始化UI界面...
+2026-04-03 20:42:03,273 - __main__ - INFO - ✓ 浮窗已显示
+2026-04-03 20:42:03,274 - __main__ - INFO - ✓ 窗口位置: (50, 50)
+2026-04-03 20:42:03,274 - __main__ - INFO - ✓ hotkey_toggle_signal 信号已连接到 _on_toggle_pause
+2026-04-03 20:42:03,274 - hotkey_manager - DEBUG - 注册单键: q (VK码: 81)
+2026-04-03 20:42:03,274 - __main__ - INFO - 初始快捷键已注册: 'q' (大小写: True)
+2026-04-03 20:42:03,274 - hotkey_manager - DEBUG - 注册组合键: ctrl+shift+e
+2026-04-03 20:42:03,274 - hotkey_manager - DEBUG - 注册组合键: ctrl+shift+h
+2026-04-03 20:42:03,274 - hotkey_manager - DEBUG - 尝试安装线程级Hook (ThreadID=21052)...
+2026-04-03 20:42:03,274 - hotkey_manager - WARNING - 线程级Hook安装失败 (错误代码: 1429)，将使用轮询模式
+2026-04-03 20:42:03,274 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式
+2026-04-03 20:42:03,276 - hotkey_manager - INFO - 开始轮询模式监听...
+2026-04-03 20:42:03,276 - hotkey_manager - DEBUG - 非阻塞模式：轮询监听线程已启动
+2026-04-03 20:42:03,276 - __main__ - INFO - 快捷键监听已启动
+2026-04-03 20:42:03,294 - window_enumerator - INFO - 找到 1 个魔兽世界窗口
+2026-04-03 20:42:03,294 - window_enumerator - DEBUG -   - HWND: 327920, 标题: 魔兽世界
+2026-04-03 20:42:03,296 - __main__ - INFO - 已刷新魔兽世界窗口列表: 1 个
+2026-04-03 20:42:07,791 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:42:07,791 - __main__ - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:42:07,791 - __main__ - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:42:07,791 - __main__ - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:42:07,791 - __main__ - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:42:07,791 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:42:07,791 - __main__ - DEBUG - _on_pause_click 被调用, worker=None, isRunning=N/A
+2026-04-03 20:42:07,791 - __main__ - DEBUG - 当前前台窗口: hotkey_manager.py - EZWowX2 - Trae CN (HWND=656398)
+2026-04-03 20:42:07,791 - __main__ - DEBUG - 创建WorkerThread, hwnd=327920
+2026-04-03 20:42:07,792 - __main__ - INFO - 目标窗口: 魔兽世界
+2026-04-03 20:42:07,792 - __main__ - DEBUG - WorkerThread已启动
+2026-04-03 20:42:07,792 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 20:42:08,113 - __main__ - DEBUG - Worker已完成
+2026-04-03 20:42:08,114 - floating_window - DEBUG - set_running_state: is_running=False, is_paused=False
+2026-04-03 20:42:09,066 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:42:09,066 - __main__ - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:42:09,066 - __main__ - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:42:09,066 - __main__ - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:42:09,066 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:42:09,066 - __main__ - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:42:09,066 - __main__ - DEBUG - _on_pause_click 被调用, worker=None, isRunning=N/A
+2026-04-03 20:42:09,066 - __main__ - DEBUG - 当前前台窗口: hotkey_manager.py - EZWowX2 - Trae CN (HWND=656398)
+2026-04-03 20:42:09,067 - __main__ - DEBUG - 创建WorkerThread, hwnd=327920
+2026-04-03 20:42:09,067 - __main__ - INFO - 目标窗口: 魔兽世界
+2026-04-03 20:42:09,067 - __main__ - DEBUG - WorkerThread已启动
+2026-04-03 20:42:09,067 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 20:42:09,350 - __main__ - DEBUG - Worker已完成
+2026-04-03 20:42:09,350 - floating_window - DEBUG - set_running_state: is_running=False, is_paused=False
+2026-04-03 20:42:14,598 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:42:14,598 - __main__ - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:42:14,598 - __main__ - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:42:14,598 - __main__ - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:42:14,598 - __main__ - DEBUG - _on_pause_click 被调用, worker=None, isRunning=N/A
+2026-04-03 20:42:14,598 - __main__ - DEBUG - 当前前台窗口: hotkey_manager.py - EZWowX2 - Trae CN (HWND=656398)
+2026-04-03 20:42:14,598 - __main__ - DEBUG - 创建WorkerThread, hwnd=327920
+2026-04-03 20:42:14,598 - __main__ - INFO - 目标窗口: 魔兽世界
+2026-04-03 20:42:14,598 - __main__ - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:42:14,598 - __main__ - DEBUG - WorkerThread已启动
+2026-04-03 20:42:14,598 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:42:14,598 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 20:42:14,872 - __main__ - DEBUG - Worker已完成
+2026-04-03 20:42:14,872 - floating_window - DEBUG - set_running_state: is_running=False, is_paused=False
+2026-04-03 20:42:15,360 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:42:15,360 - __main__ - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:42:15,360 - __main__ - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:42:15,360 - __main__ - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:42:15,360 - __main__ - DEBUG - _on_pause_click 被调用, worker=None, isRunning=N/A
+2026-04-03 20:42:15,360 - __main__ - DEBUG - 当前前台窗口: hotkey_manager.py - EZWowX2 - Trae CN (HWND=656398)
+2026-04-03 20:42:15,360 - __main__ - DEBUG - 创建WorkerThread, hwnd=327920
+2026-04-03 20:42:15,360 - __main__ - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:42:15,360 - __main__ - INFO - 目标窗口: 魔兽世界
+2026-04-03 20:42:15,360 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:42:15,360 - __main__ - DEBUG - WorkerThread已启动
+2026-04-03 20:42:15,360 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 20:42:15,632 - __main__ - DEBUG - Worker已完成
+2026-04-03 20:42:15,632 - floating_window - DEBUG - set_running_state: is_running=False, is_paused=False
+2026-04-03 20:42:20,034 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:42:20,034 - __main__ - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:42:20,034 - __main__ - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:42:20,034 - __main__ - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:42:20,034 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:42:20,034 - __main__ - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:42:20,034 - __main__ - DEBUG - _on_pause_click 被调用, worker=None, isRunning=N/A
+2026-04-03 20:42:20,034 - __main__ - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:42:20,034 - __main__ - DEBUG - 创建WorkerThread, hwnd=327920
+2026-04-03 20:42:20,034 - __main__ - INFO - 目标窗口: 魔兽世界
+2026-04-03 20:42:20,035 - __main__ - DEBUG - WorkerThread已启动
+2026-04-03 20:42:20,035 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 20:42:20,737 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:42:20,737 - __main__ - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:42:20,737 - __main__ - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:42:20,737 - __main__ - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:42:20,737 - __main__ - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:42:20,737 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:42:20,738 - __main__ - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x2c153024550) at 0x000002C15458EC80>, isRunning=True
+2026-04-03 20:42:20,738 - __main__ - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:42:20,738 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=True
+2026-04-03 20:42:20,738 - __main__ - DEBUG - Worker已暂停
+2026-04-03 20:42:22,296 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:42:22,296 - __main__ - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:42:22,296 - __main__ - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:42:22,296 - __main__ - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:42:22,296 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:42:22,296 - __main__ - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:42:22,297 - __main__ - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x2c153024550) at 0x000002C15458EC80>, isRunning=True
+2026-04-03 20:42:22,297 - __main__ - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:42:22,297 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 20:42:22,297 - __main__ - DEBUG - Worker已恢复
+2026-04-03 20:42:24,459 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:42:24,459 - __main__ - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:42:24,459 - __main__ - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:42:24,459 - __main__ - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:42:24,459 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:42:24,459 - __main__ - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:42:24,459 - __main__ - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x2c153024550) at 0x000002C15458EC80>, isRunning=True
+2026-04-03 20:42:24,459 - __main__ - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:42:24,459 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=True
+2026-04-03 20:42:24,459 - __main__ - DEBUG - Worker已暂停
+2026-04-03 20:42:27,120 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:42:27,120 - __main__ - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:42:27,120 - __main__ - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:42:27,120 - __main__ - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:42:27,120 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:42:27,120 - __main__ - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:42:27,120 - __main__ - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x2c153024550) at 0x000002C15458EC80>, isRunning=True
+2026-04-03 20:42:27,121 - __main__ - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:42:27,121 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 20:42:27,121 - __main__ - DEBUG - Worker已恢复
+2026-04-03 20:42:28,862 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:42:28,862 - __main__ - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:42:28,862 - __main__ - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:42:28,862 - __main__ - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:42:28,862 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:42:28,862 - __main__ - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:42:28,862 - __main__ - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x2c153024550) at 0x000002C15458EC80>, isRunning=True
+2026-04-03 20:42:28,862 - __main__ - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:42:28,862 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=True
+2026-04-03 20:42:28,862 - __main__ - DEBUG - Worker已暂停
+2026-04-03 20:43:28,429 - hotkey_manager - INFO - 停止监听...
+2026-04-03 20:43:28,429 - hotkey_manager - DEBUG - 已清除所有快捷键注册
+2026-04-03 20:43:28,448 - hotkey_manager - INFO - 轮询模式结束
+2026-04-03 20:47:33,494 - hotkey_manager - WARNING - 线程级Hook安装失败 (错误代码: 1429)，将使用轮询模式
+2026-04-03 20:47:33,495 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式
+2026-04-03 20:48:10,492 - smart_logging - INFO - [LOG] Debug Mode: ON
+2026-04-03 20:49:13,767 - hotkey_manager - WARNING - 线程级Hook安装失败 (错误代码: 1429)，将使用轮询模式
+2026-04-03 20:49:13,767 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式
+2026-04-03 20:49:17,900 - smart_logging - INFO - [LOG] Debug Mode: ON
+2026-04-03 20:49:20,377 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:49:20,377 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:49:20,377 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:49:20,377 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:49:20,377 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:49:20,377 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:49:20,377 - smart_logging - DEBUG - _on_pause_click 被调用, worker=None, isRunning=N/A
+2026-04-03 20:49:20,377 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:49:20,377 - smart_logging - DEBUG - 创建WorkerThread, hwnd=327920
+2026-04-03 20:49:20,377 - smart_logging - INFO - 目标窗口: 魔兽世界
+2026-04-03 20:49:20,378 - smart_logging - DEBUG - WorkerThread已启动
+2026-04-03 20:49:20,378 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 20:49:25,329 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:49:25,329 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:49:25,329 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:49:25,329 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:49:25,329 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:49:25,329 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:49:25,330 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x1cae10f9c40) at 0x000001CAE26C36C0>, isRunning=True
+2026-04-03 20:49:25,330 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:49:25,330 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=True
+2026-04-03 20:49:25,330 - smart_logging - DEBUG - Worker已暂停
+2026-04-03 20:49:26,371 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:49:26,371 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:49:26,371 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:49:26,371 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:49:26,371 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:49:26,371 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:49:26,371 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x1cae10f9c40) at 0x000001CAE26C36C0>, isRunning=True
+2026-04-03 20:49:26,371 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:49:26,371 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 20:49:26,371 - smart_logging - DEBUG - Worker已恢复
+2026-04-03 20:49:28,757 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:49:28,757 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:49:28,757 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:49:28,757 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:49:28,757 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:49:28,757 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:49:28,757 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x1cae10f9c40) at 0x000001CAE26C36C0>, isRunning=True
+2026-04-03 20:49:28,757 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:49:28,757 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=True
+2026-04-03 20:49:28,758 - smart_logging - DEBUG - Worker已暂停
+2026-04-03 20:49:30,432 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:49:30,433 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:49:30,433 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:49:30,433 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:49:30,433 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:49:30,433 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:49:30,433 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x1cae10f9c40) at 0x000001CAE26C36C0>, isRunning=True
+2026-04-03 20:49:30,433 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:49:30,434 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 20:49:30,434 - smart_logging - DEBUG - Worker已恢复
+2026-04-03 20:49:33,171 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 20:49:33,171 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 20:49:33,171 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 20:49:33,171 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 20:49:33,171 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 20:49:33,171 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 20:49:33,171 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x1cae10f9c40) at 0x000001CAE26C36C0>, isRunning=True
+2026-04-03 20:49:33,171 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 20:49:33,171 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=True
+2026-04-03 20:49:33,171 - smart_logging - DEBUG - Worker已暂停
+2026-04-03 21:16:01,219 - hotkey_manager - WARNING - 线程级Hook安装失败 (错误代码: 1429)，将使用轮询模式
+2026-04-03 21:16:01,219 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式
+2026-04-03 21:16:06,206 - smart_logging - INFO - [LOG] Debug Mode: ON
+2026-04-03 21:16:07,301 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 21:16:07,301 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 21:16:07,301 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 21:16:07,301 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 21:16:07,301 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 21:16:07,301 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 21:16:07,302 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x23996c75ae0) at 0x000002399812EE80>, isRunning=True
+2026-04-03 21:16:07,302 - smart_logging - DEBUG - 当前前台窗口: pythonw (HWND=43714602)
+2026-04-03 21:16:07,302 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=True
+2026-04-03 21:16:07,302 - smart_logging - DEBUG - Worker已暂停
+2026-04-03 21:16:08,795 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 21:16:08,795 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 21:16:08,795 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 21:16:08,795 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 21:16:08,795 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 21:16:08,795 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 21:16:08,796 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x23996c75ae0) at 0x000002399812EE80>, isRunning=True
+2026-04-03 21:16:08,796 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 21:16:08,796 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 21:16:08,796 - smart_logging - DEBUG - Worker已恢复
+2026-04-03 21:16:12,339 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 21:16:12,339 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 21:16:12,339 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 21:16:12,339 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 21:16:12,339 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 21:16:12,339 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 21:16:12,339 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x23996c75ae0) at 0x000002399812EE80>, isRunning=True
+2026-04-03 21:16:12,339 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 21:16:12,339 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=True
+2026-04-03 21:16:12,340 - smart_logging - DEBUG - Worker已暂停
+2026-04-03 21:16:12,767 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 21:16:12,767 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 21:16:12,767 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 21:16:12,767 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 21:16:12,767 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 21:16:12,767 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 21:16:12,767 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x23996c75ae0) at 0x000002399812EE80>, isRunning=True
+2026-04-03 21:16:12,767 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 21:16:12,767 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 21:16:12,767 - smart_logging - DEBUG - Worker已恢复
+2026-04-03 21:16:14,142 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 21:16:14,142 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 21:16:14,142 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 21:16:14,142 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 21:16:14,142 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 21:16:14,142 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 21:16:14,142 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x23996c75ae0) at 0x000002399812EE80>, isRunning=True
+2026-04-03 21:16:14,142 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 21:16:14,142 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=True
+2026-04-03 21:16:14,142 - smart_logging - DEBUG - Worker已暂停
+2026-04-03 21:16:14,934 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 21:16:14,934 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 21:16:14,934 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 21:16:14,934 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 21:16:14,934 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 21:16:14,934 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 21:16:14,935 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x23996c75ae0) at 0x000002399812EE80>, isRunning=True
+2026-04-03 21:16:14,935 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 21:16:14,935 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=False
+2026-04-03 21:16:14,935 - smart_logging - DEBUG - Worker已恢复
+2026-04-03 21:16:20,492 - hotkey_manager - INFO - ✓ 轮询检测到按键: q (VK=0x51)
+2026-04-03 21:16:20,492 - smart_logging - INFO - >>> [HOTKEY] toggle_pause_from_hotkey 被触发!
+2026-04-03 21:16:20,492 - smart_logging - INFO -     [HOTKEY] 发射 hotkey_toggle_signal 信号...
+2026-04-03 21:16:20,492 - smart_logging - INFO -     [HOTKEY] ✅ 信号已发射 (将自动切换到主线程执行)
+2026-04-03 21:16:20,492 - hotkey_manager - DEBUG -   → q 回调执行成功
+2026-04-03 21:16:20,492 - smart_logging - INFO - >>> [TOGGLE] _on_toggle_pause 被调用
+2026-04-03 21:16:20,492 - smart_logging - DEBUG - _on_pause_click 被调用, worker=<__main__.WorkerThread(0x23996c75ae0) at 0x000002399812EE80>, isRunning=True
+2026-04-03 21:16:20,492 - smart_logging - DEBUG - 当前前台窗口: 魔兽世界 (HWND=327920)
+2026-04-03 21:16:20,492 - floating_window - DEBUG - set_running_state: is_running=True, is_paused=True
+2026-04-03 21:16:20,492 - smart_logging - DEBUG - Worker已暂停
+2026-04-03 21:21:39,401 - hotkey_manager - WARNING - 线程级Hook安装失败 (错误代码: 1429)，将使用轮询模式
+2026-04-03 21:21:39,401 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式
+2026-04-03 21:22:19,776 - hotkey_manager - WARNING - 线程级Hook安装失败 (错误代码: 1429)，将使用轮询模式
+2026-04-03 21:22:19,776 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式

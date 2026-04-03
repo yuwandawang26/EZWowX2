@@ -1,8 +1,8 @@
 # EZWowX2 项目文档索引
 
-**文档版本**: 1.0
+**文档版本**: 1.1
 **创建日期**: 2026-04-02
-**最后更新**: 2026-04-02
+**最后更新**: 2026-04-03
 **适用范围**: EZWowX2 项目组
 
 ---
@@ -30,11 +30,29 @@
 
 | 文档 | 文件 | 说明 |
 |-----|------|------|
-| 重构文档 | ../rebuild.md | 架构问题分析、重构方案 |
+| 重构文档 | ../rebuild.md | 架构问题分析、重构方案、外包交付检查清单 |
 | 像素转储文档 | ../EZPixelDumperX2.md | 像素解析实战经验 |
 | 像素旋转文档 | ../EZPixelRotationX2/README.md | Rotation实现说明 |
 | 颜色映射文档 | ../EZPixelDumperX2.NET/ColorMap.json | 颜色编码定义 |
 | 图标数据库 | ../EZBridgeX2/core/database.py | SQLite图标库实现 |
+| 项目计划 | ./plan.md | 详细开发计划、任务分解、里程碑 |
+| 测试案例 | ./测试案例.md | SIT/UAT完整测试用例 |
+
+### 2.3 重构后新增模块
+
+| 模块 | 文件 | 说明 |
+|-----|------|------|
+| 核心接口 | ../EZDriverX2/EZDriverX2/engine/interfaces.py | ICapture/IBridgeClient/IInputSender等接口定义 |
+| 依赖注入容器 | ../EZDriverX2/EZDriverX2/engine/container.py | DIContainer服务容器 |
+| Mock实现 | ../EZDriverX2/EZDriverX2/engine/mocks.py | 测试用Mock组件 |
+| 生产实现 | ../EZDriverX2/EZDriverX2/engine/implementations.py | DxCapture/Win32InputSender等 |
+| 不可变数据类 | ../EZDriverX2/EZDriverX2/runtime/immutable.py | HealthPercent/SpellInfo/UnitSnapshot等 |
+| 异常体系 | ../EZDriverX2/EZDriverX2/runtime/exceptions.py | 完整异常分类 |
+| 重试逻辑 | ../EZDriverX2/EZDriverX2/runtime/recovery.py | RetryPolicy/RecoveryExecutor |
+| 日志监控 | ../EZDriverX2/EZDriverX2/utils/monitoring.py | StructuredLogger/PerformanceMonitor |
+| 测试框架 | ../EZDriverX2/EZDriverX2/tests/framework.py | TestCase/TestSuite/TestRunner |
+| 节点布局配置 | ../EZDriverX2/EZDriverX2/config/node_layout.py | 像素网格布局 |
+| 遮挡检测规则 | ../EZDriverX2/EZDriverX2/config/occlusion_rules.py | 遮挡判定引擎 |
 
 ---
 
@@ -183,8 +201,16 @@
 | 像素解析(Python) | ../EZBridgeX2/EZBridgeX2/core/node.py | Python节点抽象 |
 | 决策引擎 | ../EZDriverX2/EZDriverX2/engine/loop.py | 循环调度 |
 | 决策引擎 | ../EZDriverX2/EZDriverX2/engine/executor.py | 动作执行 |
+| 决策引擎(重构) | ../EZDriverX2/EZDriverX2/engine/interfaces.py | 核心接口定义 |
+| 决策引擎(重构) | ../EZDriverX2/EZDriverX2/runtime/immutable.py | 不可变数据类 |
+| 决策引擎(重构) | ../EZDriverX2/EZDriverX2/runtime/exceptions.py | 异常体系 |
+| 决策引擎(重构) | ../EZDriverX2/EZDriverX2/utils/monitoring.py | 日志/监控 |
 | 图标数据库 | ../EZBridgeX2/EZBridgeX2/core/database.py | SQLite图标库 |
 | HTTP API | ../EZPixelDumperX2.NET/Web/HttpApiServer.cs | .NET HTTP服务 |
+| 简易辅助(.NET) | ../EZAssistedX2.NET/MainForm.cs | .NET辅助主窗口 |
+| 简易辅助(.NET) | ../EZAssistedX2.NET/WorkerService.cs | .NET辅助工作服务 |
+| 简易辅助(.NET) | ../EZAssistedX2.NET/ScreenCapture.cs | .NET屏幕捕获 |
+| 简易辅助(Python) | ../EZAssistedX2.PY/EZAssistedX2.py | Python辅助主程序 |
 
 ### 7.2 配置文件
 
@@ -193,6 +219,16 @@
 | ../EZPixelDumperX2.NET/ColorMap.json | 颜色映射定义 |
 | ../EZPixelAddonX2/Setting.lua | 插件设置 |
 | ../EZAddonX2/Setting.lua | 基础插件设置 |
+| ../EZDriverX2/EZDriverX2/config/node_layout.py | 像素节点布局配置 |
+| ../EZDriverX2/EZDriverX2/config/occlusion_rules.py | 遮挡检测规则 |
+
+### 7.3 测试文件
+
+| 测试文件 | 说明 |
+|---------|------|
+| ../EZDriverX2/EZDriverX2/tests/test_interfaces.py | 接口测试(16个用例) |
+| ../EZDriverX2/EZDriverX2/tests/test_immutable.py | 不可变数据类测试(17个用例) |
+| ../EZDriverX2/EZDriverX2/tests/test_runtime.py | 运行时组件测试 |
 
 ---
 
@@ -229,3 +265,5 @@
 | 版本 | 日期 | 修订内容 |
 |-----|------|---------|
 | 1.0 | 2026-04-02 | 初始版本 |
+| 1.1 | 2026-04-03 | 添加EZAssistedX2相关文档索引 |
+| 1.2 | 2026-04-03 | 添加重构后新增模块索引，更新关键文件索引，添加测试文件索引 |

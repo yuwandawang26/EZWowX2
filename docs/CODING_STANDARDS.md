@@ -1,8 +1,8 @@
 # EZWowX2 开发规范文档
 
-**文档版本**: 1.0
+**文档版本**: 1.2
 **创建日期**: 2026-04-02
-**最后更新**: 2026-04-02
+**最后更新**: 2026-04-03
 **适用范围**: EZWowX2 项目组
 
 ---
@@ -23,36 +23,62 @@
 
 ---
 
-## 2. Python 开发规范
+## 1. Python 开发规范
 
-### 2.1 项目结构
+### 1.1 项目结构（重构后）
 
 ```
-EZDriverX2/
+EZDriverX2/EZDriverX2/
 ├── config/
+│   ├── __init__.py
 │   ├── defaults.py
 │   ├── items.py
 │   ├── macros.py
-│   └── registry.py
+│   ├── registry.py
+│   ├── node_layout.py          # 像素节点布局配置
+│   ├── occlusion_rules.py       # 遮挡检测规则
+│   └── validation.py           # 数据验证器
 ├── contracts/
+│   ├── __init__.py
 │   ├── actions.py
 │   └── profile.py
 ├── engine/
-│   ├── executor.py
-│   └── loop.py
+│   ├── __init__.py
+│   ├── executor.py             # 动作执行器
+│   ├── loop.py                 # 旋转循环引擎
+│   ├── interfaces.py            # 核心接口定义
+│   ├── container.py            # 依赖注入容器
+│   ├── mocks.py                # Mock实现
+│   └── implementations.py       # 生产实现
 ├── input/
+│   ├── __init__.py
 │   └── win32_sender.py
 ├── runtime/
+│   ├── __init__.py
 │   ├── context.py
 │   ├── data.py
-│   └── state_adapter.py
+│   ├── state_adapter.py
+│   ├── immutable.py             # 不可变数据类
+│   ├── exceptions.py            # 异常体系
+│   └── recovery.py              # 重试逻辑
 ├── transport/
+│   ├── __init__.py
 │   └── bridge_client.py
-└── ui/
-    └── main_window.py
+├── ui/
+│   ├── __init__.py
+│   └── main_window.py
+├── utils/
+│   ├── __init__.py
+│   └── monitoring.py            # 日志/性能监控
+└── tests/
+    ├── __init__.py
+    ├── framework.py             # 测试框架
+    ├── test_interfaces.py       # 接口测试
+    ├── test_immutable.py        # 不可变数据类测试
+    └── test_runtime.py         # 运行时组件测试
 ```
 
-### 2.2 命名规范
+### 1.2 命名规范
 
 | 类型 | 规范 | 示例 |
 |-----|------|------|
@@ -213,6 +239,22 @@ EZPixelDumperX2.NET/
 ├── Web/
 │   └── HttpApiServer.cs
 └── Program.cs
+```
+
+```
+EZAssistedX2.NET/
+├── EZAssistedX2.NET.csproj
+├── EZAssistedX2.NET.slnx
+├── Program.cs
+├── MainForm.cs
+├── MainForm.Designer.cs
+├── WorkerService.cs
+├── ScreenCapture.cs
+├── KeyMapping.cs
+├── NativeMethods.cs
+├── app.manifest
+└── publish/  (构建输出目录)
+    └── EZAssistedX2.NET.exe
 ```
 
 ### 3.2 命名规范
@@ -502,3 +544,5 @@ select = ["E", "F", "W", "I"]
 | 版本 | 日期 | 修订内容 |
 |-----|------|---------|
 | 1.0 | 2026-04-02 | 初始版本 |
+| 1.1 | 2026-04-03 | 添加EZAssistedX2.NET项目结构 |
+| 1.2 | 2026-04-03 | 更新Python项目结构（重构后），添加不可变数据类规范 |
