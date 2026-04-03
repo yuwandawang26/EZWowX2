@@ -89,6 +89,19 @@ flowchart LR
     B -->|JSON数据| C[EZPixelRotationX2<br/>编写决策<br/>发送按键指令]
 ```
 
+## 📚 文档导航
+
+> **新手推荐**: 首先阅读 [完整使用指南 (GUIDE.md)](GUIDE.md) ，包含快速开始、功能说明、常见问题等所有必要信息。
+
+| 文档 | 说明 | 适合读者 |
+|------|------|---------|
+| **[GUIDE.md](GUIDE.md)** ⭐ | **完整使用指南（推荐首选）** | 所有用户 |
+| [UI plan.md](docs/UI%20plan.md) | UI设计方案 | UI设计师/开发者 |
+| [UI Start.md](docs/UI%20Start.md) | 实施指南与状态追踪 | 开发者 |
+| [docs/archive/](docs/archive/) | 历史技术文档归档 | 深度开发者 |
+
+---
+
 ## 如何开始
 
 - 使用AI IDE重构本项目，获得属于自己的代码，是规避风险的最佳且必要方法：

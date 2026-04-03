@@ -1,7 +1,8 @@
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QComboBox
 from PySide6.QtCore import Qt, QPoint, QTimer
-from PySide6.QtGui import QPainter, QColor, QBrush, QKeyEvent
+from PySide6.QtGui import QPainter, QColor, QBrush, QKeyEvent, QIcon
 import logging
+import os
 
 class FloatingWindow(QWidget):
     """游戏外浮窗主窗口"""
@@ -56,6 +57,10 @@ class FloatingWindow(QWidget):
         )
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
         self.setWindowOpacity(self.WINDOW_OPACITY)
+
+        icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'EZAssistedX2.ico')
+        if os.path.exists(icon_path):
+            self.setWindowIcon(QIcon(icon_path))
 
     def _init_ui(self):
         self.main_layout = QVBoxLayout(self)

@@ -14,7 +14,7 @@ from win32gui import EnumWindows, GetWindowText, IsWindow
 
 from PySide6.QtCore import Qt, QThread, Signal, Slot, QObject
 from PySide6.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout, QComboBox, QPushButton, QLineEdit, QMessageBox, QSystemTrayIcon, QMenu, QStyle
-from PySide6.QtGui import QAction
+from PySide6.QtGui import QAction, QIcon
 
 from floating_window import FloatingWindow
 from hotkey_manager import GlobalHotkeyManager
@@ -372,7 +372,14 @@ class EZWowX2App(QObject):
 
     def _setup_tray(self):
         self.tray = QSystemTrayIcon()
-        self.tray.setIcon(self.app.style().standardIcon(QStyle.StandardPixmap.SP_ComputerIcon))
+        
+        icon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'EZAssistedX2.ico')
+        if os.path.exists(icon_path):
+            self.tray.setIcon(QIcon(icon_path))
+            logger.info(f"✓ 使用自定义托盘图标: {icon_path}")
+        else:
+            self.tray.setIcon(self.app.style().standardIcon(QStyle.StandardPixmap.SP_ComputerIcon))
+        
         self.tray.setToolTip("EZWowX2 - 辅助工具")
 
         menu = QMenu()

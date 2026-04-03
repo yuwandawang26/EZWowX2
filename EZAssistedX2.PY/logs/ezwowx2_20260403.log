@@ -283,3 +283,7 @@
 2026-04-03 21:21:39,401 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式
 2026-04-03 21:22:19,776 - hotkey_manager - WARNING - 线程级Hook安装失败 (错误代码: 1429)，将使用轮询模式
 2026-04-03 21:22:19,776 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式
+2026-04-03 21:40:48,880 - hotkey_manager - WARNING - 线程级Hook安装失败 (错误代码: 1429)，将使用轮询模式
+2026-04-03 21:40:48,880 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式
+2026-04-03 22:43:28,346 - hotkey_manager - WARNING - 线程级Hook安装失败 (错误代码: 1429)，将使用轮询模式
+2026-04-03 22:43:28,346 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式
