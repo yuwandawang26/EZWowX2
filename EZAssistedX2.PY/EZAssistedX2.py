@@ -19,8 +19,6 @@ from PySide6.QtGui import QAction, QIcon
 from floating_window import FloatingWindow
 from hotkey_manager import GlobalHotkeyManager
 from settings_manager import SettingsManager
-from skill_name_manager import SkillNameManager
-from skill_name_editor import SkillNameEditor
 from window_enumerator import WindowEnumerator
 
 
@@ -161,12 +159,11 @@ class WorkerThread(QThread):
     error_occurred_signal = Signal(str)
     finished_signal = Signal()
 
-    def __init__(self, hwnd: int, skill_manager: SkillNameManager = None):
+    def __init__(self, hwnd: int):
         super().__init__()
         self.hwnd = hwnd
         self._running = False
         self._is_paused = False
-        self.skill_manager = skill_manager
 
     def run(self):
         self._running = True
@@ -292,7 +289,6 @@ class EZWowX2App(QObject):
         self.app = QApplication.instance() or QApplication(sys.argv)
         self.app.setQuitOnLastWindowClosed(False)
 
-        self.skill_manager = SkillNameManager()
         self.settings = SettingsManager()
         self.floating_window = FloatingWindow()
         self.hotkey_manager = GlobalHotkeyManager()
@@ -400,7 +396,6 @@ class EZWowX2App(QObject):
         self.floating_window.set_exit_callback(self._on_exit)
 
     def _setup_callbacks(self):
-        self.floating_window.set_edit_skill_callback(self._on_edit_skills)
         self.floating_window.pause_button.mousePressEvent = lambda e: self._on_pause_click()
 
     def _refresh_windows(self):
@@ -456,7 +451,7 @@ class EZWowX2App(QObject):
                 target_title = WindowEnumerator.get_window_title(hwnd)
                 logger.info(f"目标窗口: {target_title}")
                 
-                self.worker = WorkerThread(hwnd, self.skill_manager)
+                self.worker = WorkerThread(hwnd)
                 self.worker.log_signal.connect(self._on_log)
                 self.worker.key_sent_signal.connect(self._on_key_sent)
                 self.worker.error_occurred_signal.connect(self._on_error)
@@ -465,7 +460,6 @@ class EZWowX2App(QObject):
                 logger.debug("WorkerThread已启动")
 
                 self.floating_window.set_running_state(True, False)
-                self.floating_window.update_skill_name("", "运行中...")
                 
             except Exception as e:
                 logger.error(f"启动失败: {e}", exc_info=True)
@@ -476,20 +470,15 @@ class EZWowX2App(QObject):
                 self.worker.resume()
                 self.floating_window.set_running_state(True, False)
                 logger.debug("Worker已恢复")
-                self.floating_window.update_skill_name("", "运行中...")
             else:
                 self.worker.pause()
                 self.floating_window.set_running_state(True, True)
                 logger.debug("Worker已暂停")
-                self.floating_window.update_skill_name("", "已暂停")
 
     def _on_log(self, msg: str):
         pass
 
     def _on_key_sent(self, color_key: str, key: str):
-        skill_name = self.skill_manager.get_name(color_key)
-        self.floating_window.update_skill_name(color_key, skill_name)
-
         for i in range(2, 0, -1):
             self.floating_window.key_log_items[i].setText(
                 self.floating_window.key_log_items[i - 1].text()
@@ -506,10 +495,6 @@ class EZWowX2App(QObject):
         logger.debug("Worker已完成")
         self.worker = None
         self.floating_window.set_running_state(False, False)
-
-    def _on_edit_skills(self):
-        dialog = SkillNameEditor(self.skill_manager, self.floating_window)
-        dialog.exec()
 
     def _on_exit(self):
         if self.worker and self.worker.isRunning():

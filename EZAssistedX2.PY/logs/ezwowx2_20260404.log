@@ -1,0 +1,2 @@
+2026-04-04 00:00:50,708 - hotkey_manager - WARNING - 线程级Hook安装失败 (错误代码: 1429)，将使用轮询模式
+2026-04-04 00:00:50,708 - hotkey_manager - WARNING - ⚠ Hook安装失败，切换到轮询模式
