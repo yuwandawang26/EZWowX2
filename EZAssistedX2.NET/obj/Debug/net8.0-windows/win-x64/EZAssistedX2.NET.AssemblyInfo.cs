@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EZAssistedX2.NET")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90e50c14c10d3c165bc5935464041d0fd8bf3d64")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+676aeaf3b7b9fa6d0a7d234328be1fb5b47b8624")]
 [assembly: System.Reflection.AssemblyProductAttribute("EZAssistedX2.NET")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EZAssistedX2.NET")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
